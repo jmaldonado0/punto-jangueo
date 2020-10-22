@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #map {
+        height: 200px;
+        width:55%;
+       }
+</style>
+ <title>PuntoJangueo</title>
+  <meta name="description" content="website description" />
+  
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+   
+  </head>
+  <body>
+   
+   
+
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+           <!-- class="logo_colour" te permite cambiar el color del logo -->
+          <h1><a href="index.html">Punto<span class="logo_colour">Jangueo</span></a></h1>
+          <h2>Un jangueo cerca de ti</h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+         <!-- pestañas de la pagina se le hace highlight "class selected" a la pagina escogida -->
+                  <li > <a href="index.html"> Home </a></li>
+		  <li ><a href="socialmedia.html">Social Media</a></li>
+		  <li><a href="gallery.html">Galeria</a><li>
+                  <li class="selected"><a href="map.html">Locacion y Horarios</a></li> 
+                  <li  ><a href="contact.html"> Contactenos </a></li>
+                 
+          
+        </ul>
+      </div>
+    </div>
+    <div id="content_header"></div>
+    <div id="site_content">
+      <div id="sidebar_container">
+        <div class="sidebar">
+          <div class="sidebar_top"></div>
+          <div class="sidebar_item">
+            <!-- contenido de barras alternas -->
+            <h3>Eventos recientes:</h3>
+			<p>Este proximo viernes se acerca el mensual gastronomico de Vega Baja traido para ustedes por la
+			administracion municipal</p>
+            
+          </div>
+          <div class="sidebar_base"></div>
+        </div>
+        <div class="sidebar">
+          <div class="sidebar_top"></div>
+          <div class="sidebar_item">
+            <h3>Diferentes redes sociales</h3>
+            <ul>
+              <li><a href=https://www.facebook.com/PuntoJangueo1> Facebook</a></li>
+              <li><a href=https://www.instagram.com/puntojangueo/>Instagram</a></li>
+              
+            </ul>
+          
+            </form>
+          </div>
+          <div class="sidebar_base"></div>
+        </div>
+      </div>
+      <div id="content">
+        <!-- contenido de la pagina -->
+        <h1>Locacion y Horarios</h1>
+
+ <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 18.4816442, lng: -66.42198777777779};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        
+        });
+
+          
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9qtIKNqocX5Z9l40GQvhlD9a7X3a2WuM&callback=initMap">
+    </script>
+ <script type="text/javascript">
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9qtIKNqocX5Z9l40GQvhlD9a7X3a2WuM&libraries=geometry">
+</script>
+<p>Aqui presentamos los diferentes horarios de los negocios: 
+<ol>
+<li>El nuevo autentico: 9:00am-12:00am</li>
+<li>La curvita sport bar: 4:00pm-1:00 am</li>
+<li>Los cocos sport bar: 9:00am-12:00am</li>
+<li>Pizza Marina: 12:00pm-2:00am</li>
+<li>El toronjal: 9:00 am - 1:00am</li>
+</ol>
+
+      </div>
+    </div>
+    <div id="content_footer"></div>
+    <div id="footer">
+      
+  </div>
+
+  </body>
+</html>
